@@ -5,7 +5,7 @@ import logo from '../../../../public/images/default.png';
 import Link from 'next/link';
 
 
-const authUser = true;
+const authUser = false;
 const authUserName = 'john'
 
 function NavItems() {
@@ -31,7 +31,7 @@ const Navbar = () => {
     <nav className='bg-white fixed w-full z-20 top-0 left-0 border-b h-20 border-gray-200'>
       <div className='max-w-screen-xl flex flex-wrap items-center justify-between mx-auto'>
         <div className='flex items-center cursor pointer'>
-          <Link href='../../../page'><Image src={logo} alt='logo' width={200} height={120}></Image></Link>
+          <Link href='/'><Image src={logo} alt='logo' width={200} height={120}></Image></Link>
         </div>
         <div className='flex md:order-2 gap-2' >
           {authUser ?(
@@ -48,7 +48,7 @@ const Navbar = () => {
            </Fragment>
           ): null}
           {
-            authUser ? <button>Logout</button> : <button>Login</button>
+            authUser ? <button>Logout</button> : <Link href='/login'><button>Login</button></Link>
           }
           <button
               data-collapse-toggle="navbar-sticky"
