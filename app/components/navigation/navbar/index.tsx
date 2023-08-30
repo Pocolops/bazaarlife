@@ -1,15 +1,8 @@
-import React, { Fragment, useContext } from 'react';
-import { navOptions } from '../common';
-import { GlobalContext } from '../../Context'; 
-import CommonModal from '../../CommonModal'; 
-import GlobalState from '../../Context';
+import React, { Fragment } from 'react';
+import {navOptions} from '../common';
 
-const authUser = true;
-const authUserName = 'john';
-
-interface NavItemsProps {
-  isModalView: boolean;
-}
+const authUser = true ;
+const authUserName = 'john'
 
 function NavItems({ isModalView }: NavItemsProps) {
   return (
@@ -36,28 +29,29 @@ const Navbar = () => {
   
 
   return (
-    <>
-      <nav className="bg-white fixed w-full z-20 top-0 left-0 border-b h-20 border-gray-200">
-        <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto">
-          <div className="flex items-center cursor-pointer">
-            <span className="self-center text-2xl font-semibold whitespace-nowrap">Bazaar Life</span>
-          </div>
-          <div className="flex md:order-2 gap-2">
-            {authUser ? (
-              <Fragment>
-                <div className="flex items-center gap-2">
-                  <div className="w-8 h-8 rounded-full bg-gray-300">
-                    {/* Insert your avatar image here */}
-                  </div>
-                  <span>Hello, {authUserName}</span>
+    <nav className='bg-white fixed w-full z-20 top-0 left-0 border-b h-20 border-gray-200'>
+      <div className='max-w-screen-xl flex flex-wrap items-center justify-between mx-auto'>
+        <div className='flex items-center cursor pointer'>
+          <span className='self-center text-2xl font-semibold whitespace-nowrap'>Bazaar Life</span>
+        </div>
+        <div className='flex md:order-2 gap-2' >
+          {authUser ?(
+             <Fragment>
+               <div className='flex items-center gap-2'>
+                <div className='w-8 h-8 rounded-full bg-gray-300'>
+                  {/* Insert your avatar image here */}
                 </div>
-                <button>Account</button>
-                <button>Cart</button>
-                <button>Sell</button>
-              </Fragment>
-            ) : null}
-            {authUser ? <button>Logout</button> : <button>Login</button>}
-            <button
+                <span>"Hello, {authUserName}"</span>
+              </div>
+             <button>Account</button>
+             <button>Cart</button>
+             <button>Sell</button>
+           </Fragment>
+          ): null}
+          {
+            authUser ? <button>Logout</button> : <button>Login</button>
+          }
+          <button
               data-collapse-toggle="navbar-sticky"
               type="button"
               className="inline-flex items-center p-4 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"

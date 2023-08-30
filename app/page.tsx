@@ -5,8 +5,7 @@ export default function Home() {
     <main className="flex min-h-screen flex-col items-center justify-between p-24">
       <h1>BazaarLifeeee</h1>
       <h2>hi</h2>
-      <h3><b>
-  "Discover, Shop, and Connect – Your Ultimate Ecommerce Experience with BazaarLife!"</b></h3>
+      <h3><b>"Discover, Shop, and Connect – Your Ultimate Ecommerce Experience with BazaarLife!"</b></h3>
     </main>
   )
 }
