@@ -24,7 +24,7 @@ function NavItems() {
 
 const Navbar = () => {
   return (
-    <nav className='bg-white fixed w-full z-20 top-0 left-0 px-5 border-b h-20 border-gray-200'>
+    <nav className='bg-white fixed w-full z-20 top-0 left-0 border-b h-20 border-gray-200'>
       <div className='max-w-screen-xl flex flex-wrap items-center justify-between mx-auto'>
         <div className='flex items-center cursor pointer'>
           <span className='self-center text-2xl font-semibold whitespace-nowrap'>Bazaar Life</span>
