@@ -1,4 +1,5 @@
 import './globals.css'
+import Navigation from "./components/navigation";
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 
@@ -16,6 +17,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
+      <Navigation />
       <body className={inter.className}>{children}</body>
     </html>
   )
