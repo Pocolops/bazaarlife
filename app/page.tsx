@@ -6,7 +6,7 @@ export default function Home() {
       <h1>BazaarLifeeee</h1>
       <h2>hi</h2>
       <h3><b>
-  "Discover, Shop, and Connect – Your Ultimate Ecommerce Experience with BazaarLive!"</b></h3>
+  "Discover, Shop, and Connect – Your Ultimate Ecommerce Experience with BazaarLife!"</b></h3>
     </main>
   )
 }
