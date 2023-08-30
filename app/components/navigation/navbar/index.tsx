@@ -5,7 +5,7 @@ import logo from '../../../../public/images/default.png';
 import Link from 'next/link';
 
 
-const authUser = true ;
+const authUser = true;
 const authUserName = 'john'
 
 function NavItems() {
