@@ -1,5 +1,7 @@
-import React, { Fragment } from 'react';
+import React, { Fragment, useState } from 'react';
 import {navOptions} from '../common';
+import CommonModal from '../../CommonModal';
+import {GlobalContext} from '../../Context';
 
 const authUser = true ;
 const authUserName = 'john'
@@ -29,6 +31,7 @@ const Navbar = () => {
   
 
   return (
+    <>
     <nav className='bg-white fixed w-full z-20 top-0 left-0 border-b h-20 border-gray-200'>
       <div className='max-w-screen-xl flex flex-wrap items-center justify-between mx-auto'>
         <div className='flex items-center cursor pointer'>
