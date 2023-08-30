@@ -3,6 +3,8 @@ import {navOptions} from '../common';
 import CommonModal from '../../CommonModal';
 import {GlobalContext} from '../../Context';
 import Link from 'next/link';
+import Image from 'next/image';
+import logo from '../../../../public/images/default.png'
 
 const authUser = true ;
 const authUserName = 'john'
@@ -36,7 +38,7 @@ const Navbar = () => {
     <nav className='bg-white fixed w-full z-20 top-0 left-0 border-b h-20 border-gray-200'>
       <div className='max-w-screen-xl flex flex-wrap items-center justify-between mx-auto'>
         <div className='flex items-center cursor pointer'>
-          <span className='self-center text-2xl font-semibold whitespace-nowrap'>Bazaar Life</span>
+          <span className='self-center text-2xl font-semibold whitespace-nowrap'><Image src={logo} alt="Logo"width={200}/></span>
         </div>
         <div className='flex md:order-2 gap-2' >
           {authUser ?(
