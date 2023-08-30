@@ -35,8 +35,8 @@ const Navbar = () => {
 
   return (
     <>
-    <nav className='bg-white fixed w-full z-20 top-0 left-0 border-b h-20 border-gray-200'>
-      <div className='max-w-screen-xl flex flex-wrap items-center justify-between mx-auto'>
+    <nav className='bg-white fixed w-full z-20 top- left-0 border-b h-20 border-gray-200'>
+      <div className='max-w-screen-xl flex flex-wrap items-center justify-between mx-auto py-5'>
         <div className='flex items-center cursor pointer'>
           <span className='self-center text-2xl font-semibold whitespace-nowrap'><Image src={logo} alt="Logo"width={200}/></span>
         </div>
