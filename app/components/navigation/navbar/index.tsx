@@ -1,37 +1,41 @@
-import React, { Fragment } from 'react';
+import React, { Fragment, useState } from 'react';
 import {navOptions} from '../common';
-import Image from 'next/image';
-import logo from '../../../../public/images/default.png';
-import Link from 'next/link';
+import CommonModal from '../../CommonModal';
+import {GlobalContext} from '../../Context';
 
-
-const authUser = false;
+const authUser = true ;
 const authUserName = 'john'
 
-function NavItems() {
+function NavItems({ isModalView }: NavItemsProps) {
   return (
-    <div className='items-center justify-between w-full md:flex md:w-auto h-20' id="nav-items">
+    <div
+      className={`items-center justify-between w-full md:flex md:w-auto ${
+        isModalView ? '' : 'hidden'
+      }`}
+      id="nav-items"
+    >
       <ul className='flex flex-col p-4 md:p-0 mt-4 font-medium border border-gray-100 rounded-lg md:flex-row md:space-x-8 md:mt-0 md:border-0 bg-white'>
-        {
-          navOptions.map((item) => (
-            <li className='cursor-pointer block py-2 pl-3 pr-4 text-gray-900 rounded md:p-0' key={item.id}>
-              {item.label}
-            </li>
-          ))}
+        {navOptions.map((item) => (
+          <li className='cursor-pointer block py-2 pl-3 pr-4 text-gray-900 rounded md:p-0' key={item.id}>
+            {item.label}
+          </li>
+        ))}
       </ul>
     </div>
   );
 }
 
-
-
-
 const Navbar = () => {
+
+  
+  
+
   return (
+    <>
     <nav className='bg-white fixed w-full z-20 top-0 left-0 border-b h-20 border-gray-200'>
       <div className='max-w-screen-xl flex flex-wrap items-center justify-between mx-auto'>
         <div className='flex items-center cursor pointer'>
-          <Link href='/'><Image src={logo} alt='logo' width={200} height={120}></Image></Link>
+          <span className='self-center text-2xl font-semibold whitespace-nowrap'>Bazaar Life</span>
         </div>
         <div className='flex md:order-2 gap-2' >
           {authUser ?(
@@ -48,7 +52,7 @@ const Navbar = () => {
            </Fragment>
           ): null}
           {
-            authUser ? <button>Logout</button> : <Link href='/login'><button>Login</button></Link>
+            authUser ? <button>Logout</button> : <button>Login</button>
           }
           <button
               data-collapse-toggle="navbar-sticky"
@@ -67,19 +71,20 @@ const Navbar = () => {
                 xmlns="http://www.w3.org/2000/svg"
               >
                 <path
-                  fill-rule="evenodd"
+                  fillRule="evenodd"
                   d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
-                  clip-rule="evenodd"
+                  clipRule="evenodd"
                 ></path>
               </svg>
             </button>
-         
+          </div>
+          <NavItems isModalView={false} />
         </div>
-        <NavItems/>
-      </div>
+      </nav>
+      
+      
+    </>
+  );
+};
 
-    </nav>
-  )
-}
-
-export default Navbar
+export default Navbar;
