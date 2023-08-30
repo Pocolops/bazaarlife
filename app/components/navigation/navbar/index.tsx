@@ -2,6 +2,7 @@ import React, { Fragment, useState } from 'react';
 import {navOptions} from '../common';
 import CommonModal from '../../CommonModal';
 import {GlobalContext} from '../../Context';
+import Link from 'next/link';
 
 const authUser = true ;
 const authUserName = 'john'
@@ -52,7 +53,7 @@ const Navbar = () => {
            </Fragment>
           ): null}
           {
-            authUser ? <button>Logout</button> : <button>Login</button>
+            authUser ? <Link href='/login'><button>Logout</button></Link> : <Link href='/login'><button>Login</button></Link>
           }
           <button
               data-collapse-toggle="navbar-sticky"
