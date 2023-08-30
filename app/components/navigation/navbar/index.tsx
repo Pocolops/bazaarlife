@@ -1,7 +1,7 @@
 import React, { Fragment } from 'react';
 import {navOptions} from '../common';
 
-const authUser = false;
+const authUser = true ;
 const authUserName = 'john'
 
 function NavItems() {
