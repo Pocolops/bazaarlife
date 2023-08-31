@@ -10,7 +10,7 @@ import Image from 'next/image';
 const Hero = () => {
   return (
     <div>
-      <Carousel>
+      <Carousel autoPlay infiniteLoop showStatus={false} showIndicators={false} showThumbs={false} interval={3000}>
         <div>
           <Image src={SliderImg_1} alt="Slider 1" />
           
