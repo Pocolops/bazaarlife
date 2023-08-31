@@ -14,7 +14,10 @@ export default function Home({ productData }: Props) {
     <main className="min-h-screen flex-col items-center justify-between pt-32">
       <div className="max-w-full flex flex-col">
         <Hero />
+        <div className='relative md:mt20'>
         <Products productData={productData} />
+        </div>
+        
         <h1>BazaarLifeeee</h1>
         <h2>hi</h2>
         <h3>
@@ -29,7 +32,7 @@ export default function Home({ productData }: Props) {
 
 export const ServerSideProps = async () => {
   try {
-    const res = await fetch("https://fakestoreapiserver.reactbd.com/tech");
+    const res = await fetch("https://fakestoreapi.com/products");
     const productData: ProductProps[] = await res.json();
     return { props: { productData } };
   } catch (error) {
