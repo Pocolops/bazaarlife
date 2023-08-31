@@ -37,19 +37,6 @@ const Navbar = () => {
 
   return (
     <>
-<<<<<<< HEAD
-    <nav className='bg-white fixed w-full z-20 top- left-0 border-b h-20 border-gray-200'>
-      <div className='max-w-screen-xl flex flex-wrap items-center justify-between mx-auto py-5 '>
-        <div className='flex items-center cursor pointer'>
-          <span className='self-center text-2xl font-semibold whitespace-nowrap'><Image src={logo} alt="Logo"width={200}/></span>
-        </div>
-        <div className='flex md:order-2 gap-2' >
-          {authUser ?(
-             <Fragment>
-               <div className='flex items-center gap-2'>
-                <div className='w-8 h-8 rounded-full bg-gray-300'>
-                  {/* Insert your avatar image here */}
-=======
       <nav className="bg-white fixed w-full z-20 top-0 left-0 border-b h-20 border-gray-200">
         <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto py-4">
           <div className="flex items-center cursor-pointer">
@@ -65,7 +52,6 @@ const Navbar = () => {
                     {/* Insert your avatar image here */}
                   </div>
                   <span>Hello, {authUserName}</span>
->>>>>>> 2274fca0718b77e16aea00786febb131dbd3ea1a
                 </div>
                 <button className={styles.button}>Account</button>
                 <button className={styles.button}>Cart</button>
