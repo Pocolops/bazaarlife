@@ -5,8 +5,9 @@ import {GlobalContext} from '../../Context';
 import Link from 'next/link';
 import Image from 'next/image';
 import logo from '../../../../public/images/default.png'
+import profilePic from '../../../../public/images/roundedProfPic.png' //example of profile pic
 
-const authUser = true ;
+const authUser = false ;
 const authUserName = 'john'
 
 function NavItems({ isModalView }: NavItemsProps) {
@@ -45,7 +46,13 @@ const Navbar = () => {
              <Fragment>
                <div className='flex items-center gap-2'>
                 <div className='w-8 h-8 rounded-full bg-gray-300'>
-                  {/* Insert your avatar image here */}
+                  <Image 
+                  src={profilePic}
+                  width={80}
+                  height={80}
+                  className='rounded-full'
+                  alt='profile'
+                  />
                 </div>
                 <span>"Hello, {authUserName}"</span>
               </div>
