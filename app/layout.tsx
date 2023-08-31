@@ -7,6 +7,7 @@ import GlobalState from '../app/components/Context';
 import Footer from '../app/components/Footer/Footer';
 
 
+
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
@@ -29,7 +30,6 @@ export default function RootLayout({
         <GlobalState>
           <Navbar />
           <main>{children}</main>
-          
           </GlobalState>
           <Footer/>
           </body>

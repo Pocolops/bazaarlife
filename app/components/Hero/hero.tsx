@@ -9,21 +9,19 @@ import Image from 'next/image';
 
 const Hero = () => {
   return (
-    <div>
+    <div className='relative'>
       <Carousel autoPlay infiniteLoop showStatus={false} showIndicators={false} showThumbs={false} interval={3000}>
         <div>
           <Image src={SliderImg_1} alt="Slider 1" />
-          
         </div>
         <div>
           <Image src={SliderImg_2} alt="Slider 2" />
-         
         </div>
         <div>
           <Image src={SliderImg_3} alt="Slider 3" />
-          
         </div>
       </Carousel>
+      <div className='w-full h-40 bg-gradient-to-t from gra-100 to-transparent absolute bottom-0 z-20'></div>
     </div>
   );
 };
