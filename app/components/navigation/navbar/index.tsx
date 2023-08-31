@@ -5,7 +5,7 @@ import CommonModal from '../../CommonModal';
 import { GlobalContext } from '../../Context';
 import Link from 'next/link';
 import Image from 'next/image';
-import logo from '../../../../public/assets/icons/favicon.png';
+import logo from '../../../../public/assets/images/default.png';
 
 const authUser = true;
 const authUserName = 'john';
@@ -36,7 +36,8 @@ const Navbar = () => {
 
   const context = useContext(GlobalContext);
   const showNavModal = context?.showNavModal ?? false;
-  const setShowNavModal = context?.setShowNavModal ?? false;
+  const setShowNavModal: React.Dispatch<React.SetStateAction<boolean>> =
+  context?.setShowNavModal ?? (() => {});
 
   return (
     <>

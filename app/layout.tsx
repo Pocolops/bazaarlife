@@ -23,13 +23,13 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        <link rel='icon' href='/favicon.png'/>
+        <link rel='icon' href='/assets/logo/favicon.png'/>
       </head>
       
       <body className={inter.className}>
         <GlobalState>
           <Navbar />
-          <main>{children}</main>
+          <main className='flex min-h-screen flex-col mt-[70px]'>{children}</main>
           </GlobalState>
           <Footer/>
           </body>
