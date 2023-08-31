@@ -5,8 +5,8 @@ import Image from 'next/image';
 
 const Hero = () => {
   return (
-    <div>
-      <Carousel>
+    <div className='relative'>
+      <Carousel autoPlay infiniteLoop showStatus={false} showIndicators={false} showThumbs={false} interval={3000}>
         <div>
           <Image 
           src='/assets/slider/SliderImg_1.jpg'
@@ -28,8 +28,10 @@ const Hero = () => {
           
         </div>
       </Carousel>
+      <div className='w-full h-40 bg-gradient-to-t from gra-100 to-transparent absolute bottom-0 z-20'></div>
     </div>
   );
 };
 
 export default Hero;
+
