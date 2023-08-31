@@ -14,3 +14,4 @@ const Products = ({productData}: any) => {
 };
 
 export default Products
+

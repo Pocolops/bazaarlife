@@ -6,6 +6,8 @@ import SliderImg_2 from '../../../public/assets/slider/sliderImg_2.jpg'
 import SliderImg_3 from '../../../public/assets/slider/sliderImg_3.jpg';
 import Image from 'next/image';
 
+
+
 const Hero = () => {
   return (
     <div className='relative'>
