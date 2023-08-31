@@ -7,7 +7,7 @@ const Footer = () => {
     <div className="w-full bg-[393E46] text-black flex items-center justify-center gap-4">
      
         <Image className="max-w-sm h-auto-" src={logo} alt="logo"/>
-       
+        <h1>"Discover, Shop, and Connect – Your Ultimate Ecommerce Experience with BazaarLife!"</h1>
        
        <p className="text-sm">
             All Rights Reserved{" "}
