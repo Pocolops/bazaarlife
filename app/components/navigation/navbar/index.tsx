@@ -1,10 +1,11 @@
 import React, { Fragment, useState } from 'react';
-import {navOptions} from '../common';
+import {navOptions , styles} from '../common';
 import CommonModal from '../../CommonModal';
 import {GlobalContext} from '../../Context';
 import Link from 'next/link';
 import Image from 'next/image';
-import logo from '../../../../public/images/default.png'
+import logo from '../../../../public/images/default.png';
+
 
 const authUser = true ;
 const authUserName = 'john'
@@ -49,13 +50,13 @@ const Navbar = () => {
                 </div>
                 <span>"Hello, {authUserName}"</span>
               </div>
-             <button>Account</button>
-             <button>Cart</button>
-             <button>Sell</button>
+             <button className={styles.button}>Account</button>
+             <button className={styles.button}>Cart</button>
+             <button className={styles.button}>Sell</button>
            </Fragment>
           ): null}
           {
-            authUser ? <Link href='/login'><button>Logout</button></Link> : <Link href='/login'><button>Login</button></Link>
+            authUser ? <Link href='/login'><button className={styles.button}>Logout</button></Link> : <Link href='/login'><button className={styles.button}>Login</button></Link>
           }
           <button
               data-collapse-toggle="navbar-sticky"
