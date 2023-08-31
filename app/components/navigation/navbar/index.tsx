@@ -49,7 +49,7 @@ const Navbar = () => {
                 <div className='w-8 h-8 rounded-full bg-gray-300'>
                   {/* Insert your avatar image here */}
       <nav className="bg-white fixed w-full z-20 top-0 left-0 border-b h-20 border-gray-200">
-        <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto py-5">
+        <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto py-4">
           <div className="flex items-center cursor-pointer">
             <span className="self-center text-2xl font-semibold whitespace-nowrap">
               <Image src={logo} alt="Logo" width={200} />
@@ -83,6 +83,7 @@ const Navbar = () => {
               type="button"
               className="inline-flex items-center p-4 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
               aria-controls="navbar-sticky"
+              
               aria-expanded="false"
               onClick={() => setShowNavModal(true)}
             >
