@@ -1,12 +1,12 @@
 export interface ProductProps {
     brand: string;
-    catergory: string;
+    category: string;
     description: string;
-    Image: string;
+    image: string;
     isNew: boolean;
     oldPrice: number;
     price: number;
-    titles: string;
+    title: string;
     _id: number;
 
 }

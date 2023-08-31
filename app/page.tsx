@@ -1,8 +1,8 @@
-import Image from 'next/image'
 import Hero from '../app/components/Hero/hero';
 import Products from '../app/components/Products/Products';
 import React from 'react';
 import { ProductProps } from '../type';
+import { GetServerSideProps } from 'next';
 
 interface Props {
   productData: ProductProps[];
@@ -14,7 +14,10 @@ export default function Home({ productData }: Props) {
     <main className="min-h-screen flex-col items-center justify-between pt-32">
       <div className="max-w-full flex flex-col">
         <Hero />
+        <div className='relative md:mt20'>
         <Products productData={productData} />
+        </div>
+        
         <h1>BazaarLifeeee</h1>
         <h2>hi</h2>
         <h3>
@@ -25,16 +28,3 @@ export default function Home({ productData }: Props) {
   );
 }
 
-// Data fetching
-
-export const ServerSideProps = async () => {
-  try {
-    const res = await fetch("https://fakestoreapiserver.reactbd.com/tech");
-    const productData: ProductProps[] = await res.json();
-    return { props: { productData } };
-  } catch (error) {
-    // Handle error if the fetch or parsing fails
-    console.error('Error fetching product data:', error);
-    return { props: { productData: [] } };
-  }
-};
