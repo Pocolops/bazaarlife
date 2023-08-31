@@ -1,9 +1,9 @@
 'use client'
 import React from 'react';
 import { Carousel } from 'react-responsive-carousel';
-import SliderImg_1 from '../../../public/images/slider/sliderImg_1.jpg';
-import SliderImg_2 from '../../../public/images/slider/sliderImg_2.jpg'
-import SliderImg_3 from '../../../public/images/slider/sliderImg_3.jpg';
+import SliderImg_1 from '../../../public/assets/slider/sliderImg_1.jpg';
+import SliderImg_2 from '../../../public/assets/slider/sliderImg_2.jpg'
+import SliderImg_3 from '../../../public/assets/slider/sliderImg_3.jpg';
 import Image from 'next/image';
 
 const Hero = () => {
