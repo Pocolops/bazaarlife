@@ -1,9 +1,11 @@
 import './globals.css'
-
+import "react-responsive-carousel/lib/styles/carousel.min.css";
 import Navbar from '../app/components/navigation/navbar/index'
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import GlobalState from '../app/components/Context';
+import Footer from '../app/components/Footer/Footer';
+
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -27,7 +29,11 @@ export default function RootLayout({
         <GlobalState>
           <Navbar />
           <main>{children}</main>
-          </GlobalState></body>
+          
+          </GlobalState>
+          <Footer/>
+          </body>
+
     </html>
   )
 }
