@@ -44,7 +44,7 @@ const Navbar = () => {
         <div className="max-w-screen-xl md:w-auto flex flex-wrap items-center justify-between mx-auto py-4">
           <div className="flex items-center cursor-pointer">
             <span className="self-center text-2xl font-semibold whitespace-nowrap">
-              <Image src={logo} alt="Logo" width={200} />
+              <Link href='/'><Image src={logo} alt="Logo" width={200} /></Link>
             </span>
           </div>
           <div className="flex md:order-2 gap-2">
