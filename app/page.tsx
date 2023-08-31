@@ -2,7 +2,8 @@ import Image from 'next/image'
 import Hero from '../app/components/Hero/hero';
 import Products from '../app/components/Products/Products';
 
-export default function Home() {
+export default function Home({productData}) {
+  console.log(productData);
   return (
     <main className="min-h-screen flex-col items-center justify-between pt-32">
       <div className="max-w-full flex flex-col">
@@ -16,3 +17,12 @@ export default function Home() {
     </main>
   )
 }
+
+//data fetching
+
+// export const getServerSideProps = async () => {
+//   const res = await fetch ("https://fakestoreapiserver.reactbd.com/tech");
+//   const productDAta = await res.json();
+//   return {props : {productData}};
+
+// }
