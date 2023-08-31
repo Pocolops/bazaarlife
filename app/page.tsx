@@ -11,7 +11,7 @@ interface Props {
 export default function Home({ productData }: Props) {
   console.log(productData);
   return (
-    <main className="min-h-screen flex-col items-center justify-between pt-32">
+    <main className="min-h-screen flex-col items-center justify-between">
       <div className="max-w-full flex flex-col">
         <Hero />
         <div className='relative md:mt20'>
