@@ -17,3 +17,4 @@ export default function GlobalState({ children }: { children: ReactNode }) {
         </GlobalContext.Provider>
     );
 }
+
