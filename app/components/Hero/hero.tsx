@@ -12,20 +12,20 @@ const Hero = () => {
       <Carousel autoPlay infiniteLoop showStatus={false} showIndicators={false} showThumbs={false} interval={3000}>
         <div>
           <Image 
-          src='/assets/slider/SliderImg_1.jpg'
+          src={SliderImg_1}
           alt="Slider 1" 
           />
         </div>
         <div>
           <Image 
-          src='/assets/slider/SliderImg_2.jpg' 
+          src={SliderImg_2}
           alt="Slider 2" 
           />
          
         </div>
         <div>
           <Image 
-          src='/assets/slider/SliderImg_3.jpg'
+          src={SliderImg_3}
           alt="Slider 3" 
           />
           
