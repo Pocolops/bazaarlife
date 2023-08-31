@@ -21,3 +21,7 @@ export const navOptions = [
     },
     
 ];
+
+export const styles = {
+    button: 'mt-.15 inline-block bg-[#A6E3E9] px-5 py-3 text-xs font-medium uppercase tracking-wide text-white'
+}

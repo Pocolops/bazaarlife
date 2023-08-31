@@ -1,15 +1,16 @@
-"use client"
-import { Dialog, Transition } from "@headlessui/react";
-import { Fragment } from "react";
 
-interface CommonModalProps {
+import React from 'react';
+import { Dialog, Transition } from "@headlessui/react";
+import {Fragment} from 'react';
+
+type CommonModalProps = {
   modalTitle: string;
-  mainContent: React.ReactNode;
-  showButtons: boolean;
-  buttonComponent: React.ReactNode;
+  mainContent: JSX.Element;
+  showButtons?: boolean;
+  buttonComponent?: JSX.Element;
   show: boolean;
-  setShow: (show: boolean) => void;
-  showModalTitle: boolean; // Add this line if you intend to use it
+  showModalTitle: boolean;
+  setShow: React.Dispatch<React.SetStateAction<boolean>>;
 }
 
 export default function CommonModal({
@@ -18,12 +19,13 @@ export default function CommonModal({
   showButtons,
   buttonComponent,
   show,
-  setShow,
-  showModalTitle, // Add this line if you intend to use it
+  showModalTitle,
+  setShow
 }: CommonModalProps) {
+
   return (
-    <Transition.Root show={show} as={Fragment}>
-      <Dialog as="div" className="relative z-10" onClose={() => setShow(false)}>
+    <Transition.Root show={show} as={React.Fragment}>
+      <Dialog as="div" className="fixed inset-0 overflow-y-auto" onClose={() => setShow(false)}>
         <Transition.Child
           as={Fragment}
           enter="ease-in-out duration-900"
@@ -31,9 +33,8 @@ export default function CommonModal({
           enterTo="opacity-100"
           leave="ease-in-out duration-500"
           leaveFrom="opacity-100"
-          leaveTo="opacity-0"
-        >
-          <div className="fixed inset-0 bg-gray-500 bg-opacity-75 transition-opacity"></div>
+          leaveTo="opacity-0">
+          <div className="fixed inset-0 bg-gray-500 bg-opacity-75 transition-opacity" />
         </Transition.Child>
         <div className="fixed inset-0 overflow-hidden">
           <div className="absolute inset-0 overflow-hidden">
@@ -45,21 +46,22 @@ export default function CommonModal({
                 enterTo="opacity-100"
                 leave="ease-in-out duration-500"
                 leaveFrom="opacity-100"
-                leaveTo="opacity-0"
-              >
+                leaveTo="opacity-0">
                 <Dialog.Panel className="w-screen max-w-md">
                   <div className="flex h-full flex-col overflow-y-scroll bg-white shadow-xl">
                     <div className="flex-1 overflow-y-auto px-4 py-6 sm:px-6">
-                      {showModalTitle && (
-                        <div className="flex items-start justify-between">
-                          <Dialog.Title>{modalTitle}</Dialog.Title>
-                        </div>
-                      )}
+                      {
+                        showModalTitle ? <div className="flex items-start justify-between">
+                        <Dialog.Title>{modalTitle}</Dialog.Title>
+                      </div> : null
+                      }
                       <div className="mt-8">{mainContent}</div>
                     </div>
-                    {showButtons ? (
-                      <div className="border-t border-gray-300 px-4 py-6 sm:px-6">{buttonComponent}</div>
-                    ) : null}
+                    {showButtons && (
+                      <div className="border-t border-gray-300 px-4 py-6 sm:px-6">
+                        {buttonComponent}
+                      </div>
+                    )}
                   </div>
                 </Dialog.Panel>
               </Transition.Child>
