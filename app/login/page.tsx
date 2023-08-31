@@ -3,7 +3,9 @@ export default function LogIn() {
       <div className="min-h-screen flex items-center justify-center bg-gray-100">
       <div className="max-w-screen-xl w-full mx-auto grid grid-cols-2 gap-6 px-6 py-8 bg-white rounded-lg shadow-md">
         <div className="col-span-1">
-          <h1 className="text-3xl font-semibold" style={{color:'black'}}>BazaarLife</h1>
+          <div className="pt-6 pl-10">
+            <h1 className="text-3xl font-semibold" style={{color:'black'}}>BazaarLife</h1>
+          </div>
         </div>
         <div className="col-span-1">
           <div className="max-w-md w-full px-4 py-6 bg-white rounded-lg shadow-md">
