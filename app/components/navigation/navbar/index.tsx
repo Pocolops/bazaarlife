@@ -55,7 +55,7 @@ const Navbar = () => {
                   <div className="w-8 h-8 rounded-full bg-gray-300">
                     {/* Insert your avatar image here */}
                   </div>
-                  <span>Hello, {authUserName}</span>
+                  <span style={{color:'black'}}>Hello, {authUserName}</span>
                 </div>
                 <button className={styles.button}>Cart</button>
                 <button className={styles.button}>Sell</button>
