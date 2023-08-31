@@ -5,7 +5,7 @@ import CommonModal from '../../CommonModal';
 import { GlobalContext } from '../../Context';
 import Link from 'next/link';
 import Image from 'next/image';
-import logo from '../../../../public/images/default.png';
+import logo from '../../../../public/assets/icons/favicon.png';
 
 const authUser = true;
 const authUserName = 'john';
