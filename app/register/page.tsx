@@ -40,6 +40,12 @@ export default function Register() {
                       />
                     ) : null
                   )}
+                  <button
+                  className='inline-flex w-full items-center justify-center bg-[#A6E3E9] px-6 py-4 text-lg
+                  text-white transition-all duration-200 ease-in-out focus:shadow font-medium uppercase tracking-wide'
+                  >
+                    Register
+                  </button>
                 </div>
               )}
             </div>
