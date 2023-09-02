@@ -5,6 +5,7 @@ import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import GlobalState from '../app/components/Context';
 import Footer from '../app/components/Footer/Footer';
+import Provider from './components/Provider';
 
 
 
@@ -23,16 +24,18 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        <link rel='icon' href='/assets/logo/favicon.png'/>
+        <link rel='icon' href='/assets/logo/favicon.png' />
       </head>
-      
+
       <body className={inter.className}>
-        <GlobalState>
-          <Navbar />
-          <main className='flex min-h-screen flex-col mt-[70px]'>{children}</main>
+        <Provider>
+          <GlobalState>
+            <Navbar />
+            <main className='flex min-h-screen flex-col mt-[70px]'>{children}</main>
           </GlobalState>
-          <Footer/>
-          </body>
+          <Footer />
+        </Provider>
+      </body>
 
     </html>
   )
