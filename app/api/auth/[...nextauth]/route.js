@@ -2,7 +2,7 @@ import NextAuth from 'next-auth';
 import GoogleProvider from "next-auth/providers/google";
 import CredentialsProvider from 'next-auth/providers/credentials';
 import connectToDB from "../../../database/database"
-import Users from '../../../model/Schema'
+import User from '../../../models/user'
 import { compare } from 'bcryptjs';
 
 export default NextAuth({
