@@ -1,7 +1,7 @@
 import NextAuth from 'next-auth';
 import GoogleProvider from "next-auth/providers/google";
 import CredentialsProvider from 'next-auth/providers/credentials';
-import connectMongo from '../../../database/conn'
+import connectToDB from "../../../database/database"
 import Users from '../../../model/Schema'
 import { compare } from 'bcryptjs';
 
